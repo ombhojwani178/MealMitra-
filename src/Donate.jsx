@@ -29,6 +29,11 @@ export default function Donate() {
             placeholder="Quantity (kgs)"
             className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
           />
+          <input
+            type="time"
+            placeholder="Pickup time"
+            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
+          />
 
           <input
             type="text"
@@ -36,7 +41,11 @@ export default function Donate() {
             placeholder="Expiry date(ddmmyyyy)"
             className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
           />
-
+          <input
+            type="text"
+            placeholder="Price"
+            className="border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-600"
+          />
           <button
             type="submit"
             className="bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition"
