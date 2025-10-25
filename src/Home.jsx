@@ -58,7 +58,7 @@ export default function Home() {
               className="relative w-full overflow-hidden rounded-xl shadow-2xl" 
               style={{ paddingTop: '56.25%' /* 16:9 Aspect Ratio */ }}
             >
-              <div className="absolute top-0 left-0 w-full h-full">
+              <div className="absolute top- left-0 w-full h-full">
                 {/* Ensure FoodMap is correctly integrated and its dependencies are installed */}
                 <FoodMap /> 
               </div>
