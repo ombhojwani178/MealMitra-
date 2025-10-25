@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FoodMap from "./components/FoodMap";
 import { useCart } from "./Cartcontext";
 
 export default function ReceiveResults({ userType = "individual" }) {
@@ -13,7 +14,7 @@ export default function ReceiveResults({ userType = "individual" }) {
       expiry: "2025-10-26",
       verified: true,
       claimed: false,
-      price: 30, // per kg
+      price: 30,
     },
     {
       name: "GreenLeaf Cafe",
@@ -66,14 +67,31 @@ export default function ReceiveResults({ userType = "individual" }) {
 
   return (
     <div className="min-h-screen bg-green-50 py-12 px-6">
+      {/* ===== Map Section at Top ===== */}
+      <div className="w-full bg-white py-12 sm:py-16 flex justify-center mb-10">
+        <div className="w-full max-w-4xl px-4 sm:px-6">
+          <h2 className="text-3xl font-bold text-green-700 mb-6 text-center">
+            Live View of Current Donations
+          </h2>
+          <div
+            className="relative w-full overflow-hidden rounded-xl shadow-2xl"
+            style={{ paddingTop: "56.25%" }} // 16:9 Aspect Ratio
+          >
+            <div className="absolute top-0 left-0 w-full h-full">
+              <FoodMap />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* ===== Donor Listings ===== */}
       <h2 className="text-3xl font-bold text-green-800 text-center mb-10">
         Available Food Donations
       </h2>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {donors.map((donor, index) => {
-          const price =
-            userType === "ngo" ? 0 : donor.price;
+          const price = userType === "ngo" ? 0 : donor.price;
 
           return (
             <div
