@@ -5,13 +5,12 @@ export default function Navbar() {
     <nav className="bg-green-800 text-white shadow-xl">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
-        {/* Logo / Title (Kept the aesthetic enhancements) */}
+        {/* Logo / Title */}
         <h1 className="text-3xl font-bold tracking-widest">MealMitra</h1>
 
         {/* Navigation Links */}
         <div className="flex space-x-3">
-          
-          {/* Default Background Added: bg-green-700 */}
+
           <Link 
             to="/" 
             className="px-4 py-2 rounded-full text-white bg-green-700 hover:bg-green-600 transition duration-300 font-medium"
@@ -39,7 +38,15 @@ export default function Navbar() {
           >
             Register
           </Link>
-          
+
+          {/* Cart Link */}
+          <Link
+            to="/cart"
+            className="px-4 py-2 rounded-full text-white bg-green-700 hover:bg-green-600 transition duration-300 font-medium"
+          >
+            Cart
+          </Link>
+
         </div>
       </div>
     </nav>
